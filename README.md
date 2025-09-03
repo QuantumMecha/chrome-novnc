@@ -1,27 +1,19 @@
-# Chromium with NoVNC
+# Overview
+Container contains node, and java17 with chrome accessible via novnc
 
 ## Installation
-- ### Heroku
-    [![Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vital987/chrome-novnc)
-
-
 - ### Manual
     ```sh
     docker run \
         --name chrome-novnc \
         -e PORT=8080 \
         -p 8080:8080 \
-        -e VNC_PASS=CHANGE_IT \
-        -d vital987/chrome-novnc:latest
+        -d quantummecha/chrome-novnc:latest
     ```
 
 ## Environment variables:
-|VARIABLE      |DESCRIPTION              |DEFAULT VALUE  |
-|-------------:|:------------------------|:-------------:|
-|VNC_PASS      |VNC Password             |CHANGE_IT      |
-|VNC_TITLE     |VNC Session Title        |Chromium       |
-|VNC_SHARED    |VNC Shared Mode          |false          |
-|VNC_RESOLUTION|VNC Resolution           |1280x720       |
-|PORT          |NoVNC HTTPS Port         |Heroku specific|
-|APP_NAME      |Name of the app          |Heroku specific|
-|NO_SLEEP      |Prevent app from sleeping|Heroku specific|
+|VARIABLE      |DESCRIPTION                |DEFAULT VALUE  |
+|-------------:|:--------------------------|:-------------:|
+|PORT          |NoVNC HTTPS Port           |               |
+|APP_NAME 	   |Name of the app            |               |
+|CHROME_URL    |Starting page for Chromium |               |
